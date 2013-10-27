@@ -150,7 +150,7 @@
         id value = dictionary[key];
         if ([value isKindOfClass:[NSString class]]) {
             NSString *stringValue = (NSString *)value;
-            [body appendData:initialBoundary ?: encapsulationBoundary];
+            [body appendData:(initialBoundary ? initialBoundary : encapsulationBoundary)];
             initialBoundary = nil;
             [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", key] dataUsingEncoding:NSUTF8StringEncoding]];
             [body appendData:[[NSString stringWithFormat:@"%@", stringValue] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -162,7 +162,7 @@
     for (id obj in attachments) {
         if ([obj isKindOfClass:[SHDAttachment class]]) {
             SHDAttachment *attachment = (SHDAttachment *)obj;
-            [body appendData:initialBoundary ?: encapsulationBoundary];
+            [body appendData:(initialBoundary ? initialBoundary : encapsulationBoundary)];
             initialBoundary = nil;
             [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n", attachment.name, attachment.fileName] dataUsingEncoding:NSUTF8StringEncoding]];
             [body appendData:[[NSString stringWithFormat:@"Content-Type: %@\r\n\r\n", attachment.mimeType] dataUsingEncoding:NSUTF8StringEncoding]];
