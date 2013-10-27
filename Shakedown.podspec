@@ -11,4 +11,5 @@ Pod::Spec.new do |s|
   s.source_files = 'Classes/**/*.{h,m}'
   s.frameworks   = 'UIKit', 'QuartzCore', 'MessageUI'
   s.requires_arc = true
+  s.dependency 'AFNetworking', '~> 2.0'
 end
