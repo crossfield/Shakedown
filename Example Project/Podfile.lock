@@ -1,0 +1,14 @@
+PODS:
+  - Shakedown (0.6.0)
+
+DEPENDENCIES:
+  - Shakedown (from `https://github.com/maxgoedjen/Shakedown.git`)
+
+EXTERNAL SOURCES:
+  Shakedown:
+    :git: https://github.com/maxgoedjen/Shakedown.git
+
+SPEC CHECKSUMS:
+  Shakedown: b458ababa21e66fbe12a994f88b623689b9d62e4
+
+COCOAPODS: 0.26.2

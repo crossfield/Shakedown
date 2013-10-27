@@ -1,0 +1,1 @@
+pod 'Shakedown', :git => 'https://github.com/maxgoedjen/Shakedown.git', :branch=>'repod'
