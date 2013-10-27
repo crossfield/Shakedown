@@ -20,7 +20,7 @@
 #if defined(DEBUG) || defined(ADHOC)
 + (UIImage *)takeScreenshot {
     // Take the interface orientation into account
-    UIImageOrientation *imageOrientation = UIImageOrientationUp;
+    UIImageOrientation imageOrientation = UIImageOrientationUp;
     switch ([UIApplication sharedApplication].statusBarOrientation) {
         case UIInterfaceOrientationLandscapeLeft:
             // yes interface landscape left IS image orientation right!
