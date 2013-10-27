@@ -8,6 +8,7 @@
 
 #import "SHDShakedownJIRAReporter.h"
 #import "SHDAttachment.h"
+#import <Base64/MF_Base64Additions.h>
 
 @implementation SHDShakedownJIRAReporter
 
@@ -33,7 +34,7 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/issue", self.apiURL]];
     NSMutableURLRequest *create = [NSMutableURLRequest requestWithURL:url];
     NSString *authString = [NSString stringWithFormat:@"%@:%@", self.login, self.password];
-    NSString *basic = [NSString stringWithFormat:@"Basic %@", [self base64StringFromString:authString]];
+    NSString *basic = [NSString stringWithFormat:@"Basic %@", [authString base64String]];
     [create setValue:basic forHTTPHeaderField:@"Authorization"];
     [create setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [create setHTTPMethod:@"POST"];

@@ -1,1 +1,2 @@
-pod 'Shakedown', :git => 'https://github.com/maxgoedjen/Shakedown.git', :branch=>'repod'
+pod 'AFNetworking', '~>2.0'
+pod 'Base64', '~> 1.0.1'

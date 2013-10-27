@@ -30,9 +30,6 @@
 - (SHDAttachment *)attachmentForLog:(NSString *)log; /** Create a SHDAttachment from the log */
 - (NSArray *)allAttachmentsForBugReport:(SHDBugReport*)bugReport; /** Create an array of SHDAttachment from the screenshot, log and attachment for the SHDBugReport */
 
-- (NSString *)base64StringFromString:(NSString *)string;
-- (NSString *)base64StringFromData:(NSData *)data;
-
 - (NSData *)httpBodyDataForDictionary:(NSDictionary *)dictionary attachments:(NSArray *)attachments boundary:(NSString *)boundary;
 
 @end
