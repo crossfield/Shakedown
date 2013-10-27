@@ -12,4 +12,5 @@ Pod::Spec.new do |s|
   s.frameworks   = 'UIKit', 'QuartzCore', 'MessageUI'
   s.requires_arc = true
   s.dependency 'AFNetworking', '~> 2.0'
+  s.dependency 'Base64', '~> 1.0.1'
 end
