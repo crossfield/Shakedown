@@ -25,7 +25,7 @@
         _keyLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 3, 100, 15)];
         _keyLabel.font = [UIFont boldSystemFontOfSize:12];
         _keyLabel.textColor = kSHDNormalColor;
-        _keyLabel.textAlignment = UITextAlignmentRight;
+        _keyLabel.textAlignment = NSTextAlignmentRight;
         _keyLabel.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:_keyLabel];
         

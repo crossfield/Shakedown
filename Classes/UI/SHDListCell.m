@@ -102,7 +102,7 @@
         _numberLabel.backgroundColor = [UIColor clearColor];
         _numberLabel.textColor = kSHDHighlightColor;
         _numberLabel.font = [UIFont boldSystemFontOfSize:14.0];
-        _numberLabel.textAlignment = UITextAlignmentRight;
+        _numberLabel.textAlignment = NSTextAlignmentRight;
         
         _textField = [[UITextField alloc] initWithFrame:CGRectMake(40, 9, 260, 30)];
         _textField.font = [UIFont systemFontOfSize:14.0];
